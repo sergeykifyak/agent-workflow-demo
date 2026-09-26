@@ -1,0 +1,33 @@
+{
+  "name": "agent-workflow-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Goal-oriented agents, multi-step workflow and output guardrails on the Claude API (research -> draft -> review -> publish)",
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "anthropic",
+    "agents",
+    "agentic-workflow",
+    "guardrails",
+    "typescript"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env --import tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22.9"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  }
+}
